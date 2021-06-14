@@ -1,9 +1,7 @@
-import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 import org.apache.activemq.artemis.nativo.jlibaio.LibaioContext;
 import org.apache.activemq.artemis.nativo.jlibaio.LibaioFile;
 import org.apache.activemq.artemis.nativo.jlibaio.SubmitInfo;
 
-import javax.jms.*;
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -85,15 +83,15 @@ public class TestClass implements SubmitInfo {
     }
 
 
-    public static void test() throws Exception{
+   /* public static void test() throws Exception{
 
         CountDownLatch countDownLatch = new CountDownLatch(1);
 
-/*        Properties properties = new Properties();
+*//*        Properties properties = new Properties();
         properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,ActiveMQInitialContextFactory.class.getName());
         properties.setProperty(Context.PROVIDER_URL,"tcp://localhost:61616?minLargeMessageSize=2M");
         properties.setProperty(Context.SECURITY_PRINCIPAL,"admin");
-        properties.setProperty(Context.SECURITY_CREDENTIALS,"admin");*/
+        properties.setProperty(Context.SECURITY_CREDENTIALS,"admin");*//*
         String url = "tcp://localhost:61616";
         String cred = "adminc";
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(url,cred,cred);
@@ -121,6 +119,6 @@ public class TestClass implements SubmitInfo {
 
        countDownLatch.await();
     }
-
+*/
 
 }
